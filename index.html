@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker Visualizer</title>
+    <!-- Load P5.js library from CDN - Required for the assignment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <style>
+        /* Basic styling for a clean, modern interface */
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        /* Control panel styling */
+        #controls {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        /* Style for dropdown and button */
+        select, button {
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        /* Button styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Control panel for user interaction -->
+    <div id="controls">
+        <!-- Dropdown menu for mood selection - This data will be stored in localStorage -->
+        <select id="moodSelect">
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="anxious">Anxious</option>
+            <option value="excited">Excited</option>
+        </select>
+        <!-- Button to trigger mood update and localStorage save -->
+        <button id="setMood">Set Mood</button>
+    </div>
+    <!-- Load our P5.js sketch - Contains the visualization and localStorage logic -->
+    <script src="sketch.js"></script>
+</body>
+</html> 
